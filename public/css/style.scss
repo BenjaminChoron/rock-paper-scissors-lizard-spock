@@ -80,6 +80,10 @@ body {
     align-items: center;
     width: 100%;
 
+    &.versus {
+        flex-direction: column;
+    }
+
     &__pentagon {
         display: flex;
         flex-direction: column;
@@ -108,6 +112,12 @@ body {
             justify-content: space-evenly;
         }
     }
+
+    & .players-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .scissors, .spock, .paper, .lizard, .rock {
@@ -123,30 +133,89 @@ body {
     position: relative;
     top: -50px;
     background: $scissorsGradient;
+
+    &--choice {
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        background: $scissorsGradient;
+    }
 }
 .spock {
     position: relative;
     top: -40px;
     left: -50px;
     background: $cyanGradient;
+
+    &--choice {
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        background: $cyanGradient;
+    }
 }
 .paper {
     position: relative;
     top: -40px;
     right: -50px;
     background: $paperGradient;
+
+    &--choice {
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        background: $paperGradient;
+    }
 }
 .lizard {
     position: relative;
     bottom: -30px;
     left: -30px;
     background: $lizardGradient;
+
+    &--choice {
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        background: $lizardGradient;
+    }
 }
 .rock {
     position: relative;
     bottom: -30px;
     right: -30px;
     background: $rockGradient;
+
+    &--choice {
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        background: $rockGradient;
+    }
 }
 
 .white-bg {
@@ -160,7 +229,50 @@ body {
     height: 110px;
 }
 
+.empty {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    margin: 15px;
+}
 
+.player, .house {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+
+    & h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+        font-size: 3rem;
+    }
+
+    & a {
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 3px solid $headerOutline;
+        border-radius: .6rem;
+        text-decoration: none;
+        color: white;
+        font-size: 1.6rem;
+        transition: .3s;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+}
 
 // FOOTER
 .footer {

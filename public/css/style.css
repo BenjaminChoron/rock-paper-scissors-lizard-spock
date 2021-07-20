@@ -55,6 +55,9 @@ body {
   align-items: center;
   width: 100%;
 }
+.main.versus {
+  flex-direction: column;
+}
 .main__pentagon {
   display: flex;
   flex-direction: column;
@@ -80,6 +83,11 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+.main .players-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .scissors, .spock, .paper, .lizard, .rock {
   display: flex;
@@ -95,11 +103,32 @@ body {
   top: -50px;
   background: radial-gradient(#ec9e0e, #eca922);
 }
+.scissors--choice {
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(#ec9e0e, #eca922);
+}
 
 .spock {
   position: relative;
   top: -40px;
   left: -50px;
+  background: radial-gradient(#40b9ce, #52bed1);
+}
+.spock--choice {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
   background: radial-gradient(#40b9ce, #52bed1);
 }
 
@@ -109,6 +138,17 @@ body {
   right: -50px;
   background: radial-gradient(#4865f4, #5671f5);
 }
+.paper--choice {
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(#4865f4, #5671f5);
+}
 
 .lizard {
   position: relative;
@@ -116,11 +156,33 @@ body {
   left: -30px;
   background: radial-gradient(#834fe3, #8c5de5);
 }
+.lizard--choice {
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(#834fe3, #8c5de5);
+}
 
 .rock {
   position: relative;
   bottom: -30px;
   right: -30px;
+  background: radial-gradient(#dc2e4e, #dd405d);
+}
+.rock--choice {
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
   background: radial-gradient(#dc2e4e, #dd405d);
 }
 
@@ -133,6 +195,47 @@ body {
   border-radius: 50%;
   width: 110px;
   height: 110px;
+}
+
+.empty {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  margin: 15px;
+}
+
+.player, .house {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.player h2, .house h2 {
+  margin-bottom: 2rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result p {
+  font-size: 3rem;
+}
+.result a {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 3px solid #606e85;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+.result a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .footer {

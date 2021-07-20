@@ -1,0 +1,45 @@
+<%- include('partials/header') %> 
+
+<header class="header">
+    <img class="header__logo" src="/images/logo-bonus.svg" alt="Rock, Paper, Scissors, Lizard, Spock">
+    <div class="header__score-box">
+        <span class="header__score-box__text">SCORE</span>
+        <span class="header__score-box__number">-</span>
+    </div>
+</header>
+
+<main class="main versus">
+    <div class="players-container">
+        <div class="player">
+            <h2>YOU PICKED</h2>
+            <div class="<%= player %>--choice">
+                <div class="white-bg">
+                    <img src="/images/icon-<%= player %>.svg" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <div class="house">
+            <h2>THE HOUSE PICKED</h2>
+            <% if (locals.house) { %>
+                <div class="<%= house %>--choice">
+                    <div class="white-bg">
+                        <img src="/images/icon-<%= house %>.svg" alt="">
+                    </div>
+                </div>
+            <% } else { %>
+                <div class="empty"></div>
+            <% } %> 
+        </div>
+    </div>
+    
+    <div class="result">
+        <% if (locals.message) { %>
+            <p><%= message %></p>
+            <a href="/">PLAY AGAIN</a>
+        <% } %>
+    </div>
+</main>
+
+
+<%- include('partials/footer') %> 
