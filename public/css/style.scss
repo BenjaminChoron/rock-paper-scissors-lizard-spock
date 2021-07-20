@@ -1,0 +1,109 @@
+// COLORS
+$scissorsGradient: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+$paperGradient: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+$rockGradient: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+$lizardGradient: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+$cyanGradient: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+$bodyBackground : radial-gradient(hsl(214, 47%, 23%), hsl(238, 48%, 15%));
+
+$darkText : hsl(229, 25%, 31%);
+$scoreText : hsl(229, 64%, 46%);
+$headerOutline : hsl(217, 16%, 45%);
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: $bodyBackground;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+}
+
+
+// HEADER
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 2rem;
+    padding: 1rem;
+    border: 3px solid $headerOutline;
+    border-radius: 1rem;
+
+    &__logo {
+        height: 100%;
+    }
+
+    &__score-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20%;
+        padding: 1rem;
+        background-color: white;
+        border-radius: .6rem;
+
+        &__text {
+            color: $scoreText;
+            font-size: 1rem;
+        }
+
+        &__number {
+            color: $darkText;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: .8;
+        }
+    }
+}
+
+
+
+// MAIN
+.main {
+    flex: 1;
+}
+
+
+
+// FOOTER
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+
+    &__attribution {
+        font-size: 1rem;
+        text-align: center;
+    
+        & a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+
+    &__rules-btn {
+        padding: .6rem 2rem;
+        background-color: hsl(238, 48%, 15%);
+        border: 2px solid white;
+        border-radius: .6rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+    }
+}

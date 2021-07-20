@@ -1,2 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(#1f3756, #141539);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 2rem;
+  padding: 1rem;
+  border: 3px solid #606e85;
+  border-radius: 1rem;
+}
+.header__logo {
+  height: 100%;
+}
+.header__score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.6rem;
+}
+.header__score-box__text {
+  color: #2a46c0;
+  font-size: 1rem;
+}
+.header__score-box__number {
+  color: #3b4363;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.8;
+}
+
+.main {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.footer__attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+.footer__attribution a {
+  color: #3e52a3;
+}
+.footer__rules-btn {
+  padding: 0.6rem 2rem;
+  background-color: #141539;
+  border: 2px solid white;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
