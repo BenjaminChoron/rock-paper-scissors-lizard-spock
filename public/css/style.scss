@@ -373,6 +373,103 @@ body {
             margin: 2rem;
         }
     }
+
+
+    .main {
+        &__pentagon {
+            width: 230px;
+            height: 230px;
+        }
+    }
+    
+    .scissors, .spock, .paper, .lizard, .rock {
+        width: 80px;
+        height: 80px;
+    }
+
+    .scissors {
+        top: -40px;
+    
+        &--choice {
+            top: 0;
+            width: 100px;
+            height: 100px;
+
+            .white-bg {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+    .spock {
+        top: -30px;
+        left: -40px;
+    
+        &--choice {
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+
+            .white-bg {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+    .paper {
+        top: -30px;
+        right: -40px;
+    
+        &--choice {
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+
+            .white-bg {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+    .lizard {
+        bottom: -20px;
+        left: -20px;
+    
+        &--choice {
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+
+            .white-bg {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+    .rock {
+        bottom: -20px;
+        right: -20px;
+    
+        &--choice {
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+
+            .white-bg {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    .white-bg {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 @media screen and (max-width: 500px) {

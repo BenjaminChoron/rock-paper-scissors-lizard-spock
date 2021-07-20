@@ -323,6 +323,94 @@ body {
   .footer__rules-btn {
     margin: 2rem;
   }
+
+  .main__pentagon {
+    width: 230px;
+    height: 230px;
+  }
+
+  .scissors, .spock, .paper, .lizard, .rock {
+    width: 80px;
+    height: 80px;
+  }
+
+  .scissors {
+    top: -40px;
+  }
+  .scissors--choice {
+    top: 0;
+    width: 100px;
+    height: 100px;
+  }
+  .scissors--choice .white-bg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .spock {
+    top: -30px;
+    left: -40px;
+  }
+  .spock--choice {
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+  .spock--choice .white-bg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .paper {
+    top: -30px;
+    right: -40px;
+  }
+  .paper--choice {
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+  }
+  .paper--choice .white-bg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .lizard {
+    bottom: -20px;
+    left: -20px;
+  }
+  .lizard--choice {
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+  .lizard--choice .white-bg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .rock {
+    bottom: -20px;
+    right: -20px;
+  }
+  .rock--choice {
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+  }
+  .rock--choice .white-bg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .white-bg {
+    width: 60px;
+    height: 60px;
+  }
 }
 @media screen and (max-width: 500px) {
   .player, .house {
