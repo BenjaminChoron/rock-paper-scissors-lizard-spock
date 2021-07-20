@@ -17,6 +17,7 @@ const mainController = {
         if(randomChoice === playerChoice) {
             res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "rock" || randomChoice === "spock") {
+            req.session.score--;
             res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
             req.session.score++;
@@ -35,6 +36,7 @@ const mainController = {
         if(randomChoice === playerChoice) {
             res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "lizard" || randomChoice === "paper") {
+            req.session.score--;
             res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
             req.session.score++;
@@ -53,6 +55,7 @@ const mainController = {
         if(randomChoice === playerChoice) {
             res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "scissors" || randomChoice === "lizard") {
+            req.session.score--;
             res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
             req.session.score++;
@@ -71,6 +74,7 @@ const mainController = {
         if(randomChoice === playerChoice) {
             res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "rock" || randomChoice === "scissors") {
+            req.session.score--;
             res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
             req.session.score++;
@@ -89,6 +93,7 @@ const mainController = {
         if(randomChoice === playerChoice) {
             res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "paper" || randomChoice === "spock") {
+            req.session.score--;
             res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
             req.session.score++;
