@@ -50,6 +50,89 @@ body {
 
 .main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.main__pentagon {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  background-image: url("/images/bg-pentagon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main__pentagon__row1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.main__pentagon__row2 {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.main__pentagon__row3 {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.scissors, .spock, .paper, .lizard, .rock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+}
+
+.scissors {
+  position: relative;
+  top: -50px;
+  background: radial-gradient(#ec9e0e, #eca922);
+}
+
+.spock {
+  position: relative;
+  top: -40px;
+  left: -50px;
+  background: radial-gradient(#40b9ce, #52bed1);
+}
+
+.paper {
+  position: relative;
+  top: -40px;
+  right: -50px;
+  background: radial-gradient(#4865f4, #5671f5);
+}
+
+.lizard {
+  position: relative;
+  bottom: -30px;
+  left: -30px;
+  background: radial-gradient(#834fe3, #8c5de5);
+}
+
+.rock {
+  position: relative;
+  bottom: -30px;
+  right: -30px;
+  background: radial-gradient(#dc2e4e, #dd405d);
+}
+
+.white-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-top: 6px solid #cccccc;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
 }
 
 .footer {
