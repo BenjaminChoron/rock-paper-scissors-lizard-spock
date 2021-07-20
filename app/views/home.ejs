@@ -1,13 +1,5 @@
 <%- include('partials/header') %> 
 
-<header class="header">
-    <img class="header__logo" src="/images/logo-bonus.svg" alt="Rock, Paper, Scissors, Lizard, Spock">
-    <div class="header__score-box">
-        <span class="header__score-box__text">SCORE</span>
-        <span class="header__score-box__number">-</span>
-    </div>
-</header>
-
 <main class="main">
     <div class="main__pentagon">
         <div class="main__pentagon__row1">
@@ -53,5 +45,15 @@
         </div>
     </div>
 </main>
+
+<div class="rules-modal">
+    <div class="rules-modal__modal">
+        <header class="rules-modal__modal__header">
+            <h3>RULES</h3>
+            <span class="close">❌</span>
+        </header>
+        <img src="/images/image-rules-bonus.svg" alt="">
+    </div>
+</div>
 
 <%- include('partials/footer') %> 

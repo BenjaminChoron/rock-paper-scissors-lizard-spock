@@ -1,6 +1,9 @@
 const mainController = {
     homePage: (req, res) => {
-        res.render('home');
+        if(!req.session.score){
+            req.session.score = 0;
+        }
+        res.render('home', { score: req.session.score });
     },
 
     scissorsPage: (req, res) => {
@@ -12,11 +15,12 @@ const mainController = {
         const randomChoice = houseChoices[getRandomInt(houseChoices.length)];
 
         if(randomChoice === playerChoice) {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "rock" || randomChoice === "spock") {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN" });
+            req.session.score++;
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN", score: req.session.score });
         }
     },
 
@@ -29,11 +33,12 @@ const mainController = {
         const randomChoice = houseChoices[getRandomInt(houseChoices.length)];
 
         if(randomChoice === playerChoice) {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "lizard" || randomChoice === "paper") {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN" });
+            req.session.score++;
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN", score: req.session.score });
         }
     },
 
@@ -46,11 +51,12 @@ const mainController = {
         const randomChoice = houseChoices[getRandomInt(houseChoices.length)];
 
         if(randomChoice === playerChoice) {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "scissors" || randomChoice === "lizard") {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN" });
+            req.session.score++;
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN", score: req.session.score });
         }
     },
 
@@ -63,11 +69,12 @@ const mainController = {
         const randomChoice = houseChoices[getRandomInt(houseChoices.length)];
 
         if(randomChoice === playerChoice) {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "rock" || randomChoice === "scissors") {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN" });
+            req.session.score++;
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN", score: req.session.score });
         }
     },
 
@@ -80,11 +87,12 @@ const mainController = {
         const randomChoice = houseChoices[getRandomInt(houseChoices.length)];
 
         if(randomChoice === playerChoice) {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "TIE GAME", score: req.session.score });
         } else if(randomChoice === "paper" || randomChoice === "spock") {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE" });
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU LOSE", score: req.session.score });
         } else {
-            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN" });
+            req.session.score++;
+            res.render('versus', { player: playerChoice, house: randomChoice, message: "YOU WIN", score: req.session.score });
         }
     },
 }

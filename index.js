@@ -15,6 +15,14 @@ app.set('view engine', 'ejs');
 // fichiers statiques
 app.use(express.static('public'));
 
+// gestion des sessions
+const session = require('express-session');
+app.use(session({
+    saveUninitialized: true,
+    resave: true,
+    secret: 'Un Super Secret'
+}));
+
 // routage
 const router = require('./app/router');
 app.use(router);
